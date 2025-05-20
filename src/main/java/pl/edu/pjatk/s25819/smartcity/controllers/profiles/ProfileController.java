@@ -6,12 +6,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pl.edu.pjatk.s25819.smartcity.dtos.profiles.ProfileMapper;
-import pl.edu.pjatk.s25819.smartcity.dtos.profiles.ProfileResponseDto;
-import pl.edu.pjatk.s25819.smartcity.entities.profiles.Profile;
+import pl.edu.pjatk.s25819.smartcity.dto.profiles.ProfileMapper;
+import pl.edu.pjatk.s25819.smartcity.dto.profiles.ProfileResponseDto;
 import pl.edu.pjatk.s25819.smartcity.services.profiles.ProfileService;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequiredArgsConstructor
@@ -27,7 +27,7 @@ public class ProfileController {
 
         var profileDtos = profiles.stream()
                 .map(ProfileMapper::toDto)
-                .toList();
+                .collect(Collectors.toList());
 
         return ResponseEntity.ok(profileDtos);
     }

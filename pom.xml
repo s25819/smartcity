@@ -12,7 +12,7 @@
     <artifactId>smartcity-dashboard</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>smartcity-dashboard</name>
-    <description>Dashboard for Smartcity application</description>
+    <description>Backend dla webowego dashboardu Smart City</description>
     <url/>
     <licenses>
         <license/>
@@ -55,7 +55,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
@@ -82,6 +81,15 @@
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -102,6 +110,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <fork>true</fork>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>

@@ -1,4 +1,4 @@
-package pl.edu.pjatk.s25819.smartcity.dtos.profiles;
+package pl.edu.pjatk.s25819.smartcity.dto.profiles;
 
 import pl.edu.pjatk.s25819.smartcity.entities.profiles.Profile;
 import pl.edu.pjatk.s25819.smartcity.entities.profiles.Role;

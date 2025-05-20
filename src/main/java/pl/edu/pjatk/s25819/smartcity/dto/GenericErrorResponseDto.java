@@ -1,4 +1,4 @@
-package pl.edu.pjatk.s25819.smartcity.dtos.auth;
+package pl.edu.pjatk.s25819.smartcity.dto;
 
 public record GenericErrorResponseDto(
         String message,

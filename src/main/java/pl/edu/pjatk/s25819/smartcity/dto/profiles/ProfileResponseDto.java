@@ -1,4 +1,4 @@
-package pl.edu.pjatk.s25819.smartcity.dtos.profiles;
+package pl.edu.pjatk.s25819.smartcity.dto.profiles;
 
 import java.util.List;
 
